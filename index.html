@@ -269,6 +269,21 @@
   .talal-role-label { font-size: 0.72rem; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.4rem; }
   .talal-role-text { font-size: 0.88rem; color: var(--navy); line-height: 1.6; }
 
+
+  /* PROJECT ADDITIONS */
+  .group-label { display:flex; align-items:center; gap:1rem; margin:3rem 0 1.5rem; }
+  .group-label span { font-size:0.78rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:var(--navy); }
+  .group-label::after { content:''; flex:1; height:1px; background:rgba(13,31,60,0.12); }
+  .project-header.thermo { background: linear-gradient(135deg, #3a1410 0%, #a8431f 55%, #d9822b 100%); }
+  .project-header.thermo .project-tag { background: rgba(255,255,255,0.15); color:#ffe2b8; }
+  .doc-links { display:flex; flex-wrap:wrap; gap:0.6rem; margin-top:1.5rem; }
+  .btn-sm { font-size:0.82rem !important; padding:0.6rem 1.2rem !important; }
+  .btn-ghost { display:inline-flex; align-items:center; gap:0.4rem; border-radius:4px; border:1.5px solid rgba(13,31,60,0.18); color:var(--navy); font-weight:600; text-decoration:none; transition:all 0.2s; }
+  .btn-ghost:hover { border-color:var(--sky); color:var(--sky); }
+  .photo-grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.5rem; }
+  .photo-grid img { width:100%; height:320px; object-fit:cover; border-radius:10px; }
+  @media (max-width: 600px) { .photo-grid { grid-template-columns:1fr; } .photo-grid img { height:260px; } .project-header, .project-body { padding:1.5rem; } }
+
   /* CV */
   #cv { background: var(--light); }
   .cv-inner {
@@ -370,7 +385,7 @@
       <div class="hero-eyebrow fade-up">Mechanical Engineering Student</div>
       <h1 class="fade-up fade-up-delay-1">Talal <em>Abu</em><br>Ghazaleh</h1>
       <p class="hero-desc fade-up fade-up-delay-2">
-        Second-year Mechanical Engineering student at the University of Birmingham Dubai — designing the future of ocean habitats, applying CAD, AI, and engineering principles to complex real-world challenges.
+        Final-year Mechanical Engineering student at the University of Birmingham Dubai, focused on thermodynamics, heat transfer and energy systems — from engine cycles to data-centre cooling.
       </p>
       <div class="hero-ctas fade-up fade-up-delay-3">
         <a href="#projects" class="btn-primary">View Projects →</a>
@@ -391,8 +406,8 @@
           <span class="stat-value">Birmingham, Dubai</span>
         </div>
         <div class="card-stat">
-          <span class="stat-label">Year 1 Results</span>
-          <span class="stat-badge">First-Class Honours Performance</span>
+          <span class="stat-label">Year 2 Results</span>
+          <span class="stat-badge">First-Class Average</span>
         </div>
         <div class="card-stat">
           <span class="stat-label">Graduation</span>
@@ -418,8 +433,8 @@
     <h2 class="section-title fade-up">Engineering meets<br><em style="font-style:italic;color:var(--accent)">curiosity</em></h2>
     <div class="about-grid">
       <div class="about-text fade-up">
-        <p>I'm a second-year Mechanical Engineering student based in Dubai, combining a strong academic foundation with hands-on engineering project work.</p>
-        <p>My Year 1 results, achieving a First-Class Honours performance, reflect my dedication to mastering complex engineering fundamentals. Beyond the classroom, I've contributed to two major group design projects, including a 200-page report on an underwater habitat system.</p>
+        <p>I'm a final-year Mechanical Engineering student based in Dubai, combining a strong academic foundation with hands-on engineering project work. Thermodynamics, heat transfer and fluid mechanics are where I perform strongest.</p>
+        <p>My First-Class Year 2 average reflects my dedication to mastering complex engineering fundamentals. Beyond the classroom, I've designed and validated a miniature diesel engine, run thermofluids experiments from compressors to steam engines, and contributed to two major group design projects, including a 200-page report on an underwater habitat system.</p>
         <p>I'm passionate about how AI and modern tools can accelerate engineering workflows, and I bring that mindset into every project I work on.</p>
       </div>
       <div class="skills-grid fade-up fade-up-delay-1">
@@ -457,104 +472,225 @@
   <div class="max-w">
     <div class="projects-intro">
       <div class="section-label fade-up">Engineering Projects</div>
-      <h2 class="section-title fade-up">University of Birmingham Dubai<br>Integrated Design Projects</h2>
-      <p class="section-sub fade-up">Both projects were part of the Integrated Design Project 2 module — a half-year long deep-dive into designing a fully operational Future Ocean Habitat, from concept through to detailed mechanical design.</p>
+      <h2 class="section-title fade-up">Selected work from<br>University of Birmingham Dubai</h2>
+      <p class="section-sub fade-up">Eight projects from my first two years. Thermodynamics, heat transfer and fluids come first — the area I perform strongest in and want to build my career around, especially energy and cooling systems.</p>
     </div>
 
-    <!-- Project 1 -->
+    <div class="group-label fade-up"><span>Thermodynamics · Heat Transfer · Energy</span></div>
+
+    <!-- 01 Engine -->
     <div class="project-card fade-up">
-      <div class="project-header">
+      <div class="project-header thermo">
         <div class="project-num">01</div>
-        <div class="project-tag">IDP2 · Assignment 1 · Feb 2026</div>
-        <h3 class="project-title">Future Ocean Habitat —<br>Concept Design</h3>
-        <div class="project-meta">Group D3 · 6 members · University of Birmingham Dubai</div>
+        <div class="project-tag">Mechanical Design A · Year 2 · 2025/26</div>
+        <h3 class="project-title">Two-Stroke Compression-Ignition<br>UAV Engine — Design &amp; Thermodynamic Validation</h3>
+        <div class="project-meta">Group 9 · 4 members · University of Birmingham Dubai</div>
       </div>
       <div class="project-body">
         <p class="project-desc">
-          A comprehensive 204-page concept design for a fully self-sustaining underwater habitat capable of supporting human life independently from land. The habitat integrates four major mission systems: structural life support, Direct Ocean Capture (CO₂), an Underwater Data Centre, and Deep Sea Mining operations — all engineered to operate without harming the marine environment.
+          Full design and validation of a 0.76 cc, air-cooled, two-stroke diesel (CI) engine for a UAV, delivering ~45 W at 12,000 rpm for a 15-minute mission. The engine cycle was modelled thermodynamically: isentropic compression at a running compression ratio of 18:1 raises the charge from 299 K to ~951 K and 5.8 MPa; with a 1600 K peak combustion temperature the peak cylinder pressure reaches 9.76 MPa. That pressure then drives the structural design — combustion force on the piston, crankshaft bending and torsion, bearing loads and deflection checks with a safety factor ≥ 2.
         </p>
-        <div class="talal-role">
-          <div class="talal-role-label">Talal's Role</div>
-          <div class="talal-role-text">Deep Sea Mining System Lead · CAD of Underwater Habitat Structure · Material Selection & Life Cycle Analysis · Morphological Chart · Meeting Logs</div>
-        </div>
         <div class="project-highlights">
-          <div class="highlight">
-            <div class="highlight-label">Report Length</div>
-            <div class="highlight-value">204 pages</div>
-          </div>
-          <div class="highlight">
-            <div class="highlight-label">Word Count</div>
-            <div class="highlight-value">38,842 words</div>
-          </div>
-          <div class="highlight">
-            <div class="highlight-label">Team Size</div>
-            <div class="highlight-value">6 engineers</div>
-          </div>
-          <div class="highlight">
-            <div class="highlight-label">Design Outcome</div>
-            <div class="highlight-value">Technically feasible</div>
-          </div>
+          <div class="highlight"><div class="highlight-label">Compression Ratio</div><div class="highlight-value">8:1 start · 18:1 run</div></div>
+          <div class="highlight"><div class="highlight-label">Peak Cylinder Pressure</div><div class="highlight-value">9.76 MPa @ 1600 K</div></div>
+          <div class="highlight"><div class="highlight-label">Output</div><div class="highlight-value">45 W @ 12,000 rpm</div></div>
+          <div class="highlight"><div class="highlight-label">Bore × Stroke</div><div class="highlight-value">10.49 × 8.74 mm</div></div>
         </div>
         <div class="project-tags">
-          <span class="tag">CAD Modelling</span>
-          <span class="tag">Structural Design</span>
-          <span class="tag">Deep Sea Mining</span>
-          <span class="tag">Life Cycle Analysis</span>
-          <span class="tag">TRIZ Matrix</span>
-          <span class="tag">HAZOP</span>
-          <span class="tag">ANSYS Granta EduPack</span>
+          <span class="tag">Engine Thermodynamics</span><span class="tag">Isentropic Compression</span><span class="tag">Combustion Analysis</span><span class="tag">Air Cooling</span><span class="tag">Port Timing</span><span class="tag">Shaft &amp; Bearing Design</span><span class="tag">BS 8888 Drawings</span>
         </div>
-        <div style="margin-top:1.5rem;">
-          <a href="project1.pdf" target="_blank" class="btn-primary" style="font-size:0.85rem;padding:0.7rem 1.5rem;">📄 View Full Report</a>
+        <div class="doc-links">
+          <a href="docs/engine-design-report.pdf" target="_blank" class="btn-primary btn-sm">📄 Design &amp; Validation Report</a>
+          <a href="docs/engine-assembly-drawing.pdf" target="_blank" class="btn-ghost btn-sm">📐 Assembly Drawing</a>
         </div>
       </div>
     </div>
 
-    <!-- Project 2 -->
+    <!-- 02 Thermofluids labs -->
+    <div class="project-card fade-up">
+      <div class="project-header thermo">
+        <div class="project-num">02</div>
+        <div class="project-tag">Fluid Mechanics &amp; Energy Transfer · Year 1 · 2024/25</div>
+        <h3 class="project-title">Thermofluids Experimental Series —<br>Compressors, Steam Power &amp; Heat Transfer</h3>
+        <div class="project-meta">Individual technical reports · 6 experiments</div>
+      </div>
+      <div class="project-body">
+        <p class="project-desc">
+          A series of experiments testing thermodynamic and fluid theory against real hardware. On the energy side: a <strong>two-stage reciprocating air compressor</strong> (free air delivery, electrical vs indicated power, efficiency and polytropic index of each stage — showing why inter-stage cooling cuts compression work); a <strong>steam engine</strong> run at three boiler pressures, with Willans lines built from brake power and steam consumption; and <strong>natural convection and radiation</strong> from a heated plate, separating the two modes with the Stefan–Boltzmann law and showing radiation overtaking convection as surface temperature rises. On the fluids side: Bernoulli and venturimeters, jet impact forces, and friction losses in pipes.
+        </p>
+        <div class="project-highlights">
+          <div class="highlight"><div class="highlight-label">Thermodynamics</div><div class="highlight-value">Compressor &amp; steam engine</div></div>
+          <div class="highlight"><div class="highlight-label">Heat Transfer</div><div class="highlight-value">Convection vs radiation</div></div>
+          <div class="highlight"><div class="highlight-label">Fluid Mechanics</div><div class="highlight-value">Venturi · jets · pipe losses</div></div>
+        </div>
+        <div class="project-tags">
+          <span class="tag">Polytropic Compression</span><span class="tag">Inter-stage Cooling</span><span class="tag">Willans Line</span><span class="tag">Stefan–Boltzmann</span><span class="tag">Natural Convection</span><span class="tag">Bernoulli</span><span class="tag">Major &amp; Minor Losses</span>
+        </div>
+        <div class="doc-links">
+          <a href="docs/lab-two-stage-compressor.pdf" target="_blank" class="btn-primary btn-sm">📄 Two-Stage Compressor</a>
+          <a href="docs/lab-steam-engine.pdf" target="_blank" class="btn-primary btn-sm">📄 Steam Engine</a>
+          <a href="docs/lab-convection-radiation.pdf" target="_blank" class="btn-primary btn-sm">📄 Convection &amp; Radiation</a>
+          <a href="docs/lab-venturimeter.pdf" target="_blank" class="btn-ghost btn-sm">Venturimeters</a>
+          <a href="docs/lab-impact-of-jets.pdf" target="_blank" class="btn-ghost btn-sm">Impact of Jets</a>
+          <a href="docs/lab-pipe-losses.pdf" target="_blank" class="btn-ghost btn-sm">Pipe Losses</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03 Solar -->
+    <div class="project-card fade-up">
+      <div class="project-header thermo">
+        <div class="project-num">03</div>
+        <div class="project-tag">Integrated Design Project 1A · Year 1 · 2024/25</div>
+        <h3 class="project-title">Solar Power for Electricity &amp; Cooling —<br>Technical Report and Presentation</h3>
+        <div class="project-meta">Individual report + presentation</div>
+      </div>
+      <div class="project-body">
+        <p class="project-desc">
+          An assessment of solar power as a route to energy needs and climate goals. Covers how concentrated solar thermal plants heat a working fluid to drive a steam turbine versus how PV cells generate electricity; solar-driven cooling using vapour-compression refrigeration and thermoelectric coolers for off-grid use; the thermo-mechanical start-up limits of CSP plants (receiver, steam generator, turbine); the measured effect of air pollution on PV output; and the role of solar in UAE decarbonisation, with Dubai's Sustainable City as a case study.
+        </p>
+        <div class="project-tags">
+          <span class="tag">Solar Thermal (CSP)</span><span class="tag">Photovoltaics</span><span class="tag">Vapour-Compression Refrigeration</span><span class="tag">Thermoelectric Cooling</span><span class="tag">UAE Energy Transition</span>
+        </div>
+        <div class="doc-links">
+          <a href="docs/solar-power-report.pdf" target="_blank" class="btn-primary btn-sm">📄 Report</a>
+          <a href="docs/solar-power-presentation.pdf" target="_blank" class="btn-ghost btn-sm">🖥️ Presentation</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="group-label fade-up"><span>Large-Scale Design Projects</span></div>
+
+    <!-- 04 IDP2 A2 -->
     <div class="project-card fade-up">
       <div class="project-header">
-        <div class="project-num">02</div>
+        <div class="project-num">04</div>
         <div class="project-tag">IDP2 · Assignment 2 · May 2026</div>
         <h3 class="project-title">Future Ocean Habitat —<br>Mechanical Detail Design</h3>
         <div class="project-meta">Group DM3 · 6 members · University of Birmingham Dubai</div>
       </div>
       <div class="project-body">
         <p class="project-desc">
-          A 128-page detailed mechanical design report taking the concept to full engineering specification. The final habitat is a pentagonal radial arrangement of geodesic pressure domes (HY-100 steel and Ti-6Al-4V) connected by cylindrical tunnels, designed to operate at 100–150 m depth in the Ionian Sea.
+          A 128-page detailed mechanical design report taking the habitat concept to full engineering specification. The final habitat is a pentagonal radial arrangement of geodesic pressure domes (HY-100 steel and Ti-6Al-4V) at 100–150 m depth in the Ionian Sea, integrating a Direct Ocean Capture system (1,000 kg/day CO₂) and an Underwater Data Centre with a 1,225 kW IT load cooled by seawater heat rejection.
         </p>
         <div class="talal-role">
           <div class="talal-role-label">Talal's Role</div>
-          <div class="talal-role-text">Direct Ocean Capture (DOC) System · Objective Tree Sketch & Refinement · SDG Progression · Integration Block Diagram · Requirements Specification · Functional Flow · Material Selection & LCA · CAD Development & Subsystem Integration</div>
+          <div class="talal-role-text">Owner of WP6 — Data Centre Rack/Chassis, Power Interface, Corrosion Protection &amp; Deployment Frame · Co-owner of WP7 — Data Centre Pressure Hull (external-pressure vessel) · Design Calculations &amp; CAD for WP6 and WP7 · Product Design Specification · Integration Design Rationales</div>
         </div>
         <div class="project-highlights">
-          <div class="highlight">
-            <div class="highlight-label">Report Length</div>
-            <div class="highlight-value">128 pages</div>
-          </div>
-          <div class="highlight">
-            <div class="highlight-label">Team Size</div>
-            <div class="highlight-value">6 engineers</div>
-          </div>
-          <div class="highlight">
-            <div class="highlight-label">CO₂ Capture</div>
-            <div class="highlight-value">1,000 kg/day</div>
-          </div>
-          <div class="highlight">
-            <div class="highlight-label">Habitat Depth</div>
-            <div class="highlight-value">100–150 m</div>
-          </div>
+          <div class="highlight"><div class="highlight-label">Report Length</div><div class="highlight-value">128 pages</div></div>
+          <div class="highlight"><div class="highlight-label">Data Centre Load</div><div class="highlight-value">1,225 kW IT</div></div>
+          <div class="highlight"><div class="highlight-label">CO₂ Capture</div><div class="highlight-value">1,000 kg/day</div></div>
+          <div class="highlight"><div class="highlight-label">Habitat Depth</div><div class="highlight-value">100–150 m</div></div>
         </div>
         <div class="project-tags">
-          <span class="tag">Pressure Vessel Design</span>
-          <span class="tag">DOC Systems</span>
-          <span class="tag">CAD Integration</span>
-          <span class="tag">FEA Analysis</span>
-          <span class="tag">Subsea Engineering</span>
-          <span class="tag">HY-100 Steel</span>
-          <span class="tag">Ti-6Al-4V</span>
+          <span class="tag">Pressure Vessel Design</span><span class="tag">Underwater Data Centre</span><span class="tag">Seawater Heat Rejection</span><span class="tag">Corrosion Protection</span><span class="tag">CAD Integration</span><span class="tag">HY-100 Steel</span><span class="tag">Ti-6Al-4V</span>
         </div>
-        <div style="margin-top:1.5rem;">
-          <a href="project2.pdf" target="_blank" class="btn-primary" style="font-size:0.85rem;padding:0.7rem 1.5rem;">📄 View Full Report</a>
+        <div class="doc-links">
+          <a href="project2.pdf" target="_blank" class="btn-primary btn-sm">📄 View Full Report</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 05 IDP2 A1 -->
+    <div class="project-card fade-up">
+      <div class="project-header">
+        <div class="project-num">05</div>
+        <div class="project-tag">IDP2 · Assignment 1 · Feb 2026</div>
+        <h3 class="project-title">Future Ocean Habitat —<br>Concept Design</h3>
+        <div class="project-meta">Group D3 · 6 members · University of Birmingham Dubai</div>
+      </div>
+      <div class="project-body">
+        <p class="project-desc">
+          A 204-page concept design for a self-sustaining underwater habitat able to support human life independently from land. It integrates four mission systems — structural life support, Direct Ocean Capture (CO₂), an Underwater Data Centre, and Deep Sea Mining — engineered to operate without harming the marine environment.
+        </p>
+        <div class="talal-role">
+          <div class="talal-role-label">Talal's Role</div>
+          <div class="talal-role-text">Deep Sea Mining System Lead · CAD of Underwater Habitat Structure · Material Selection &amp; Life Cycle Analysis · Morphological Chart · Meeting Logs</div>
+        </div>
+        <div class="project-highlights">
+          <div class="highlight"><div class="highlight-label">Report Length</div><div class="highlight-value">204 pages</div></div>
+          <div class="highlight"><div class="highlight-label">Word Count</div><div class="highlight-value">38,842 words</div></div>
+          <div class="highlight"><div class="highlight-label">Team Size</div><div class="highlight-value">6 engineers</div></div>
+        </div>
+        <div class="project-tags">
+          <span class="tag">CAD Modelling</span><span class="tag">Structural Design</span><span class="tag">Deep Sea Mining</span><span class="tag">Life Cycle Analysis</span><span class="tag">TRIZ Matrix</span><span class="tag">HAZOP</span><span class="tag">ANSYS Granta EduPack</span>
+        </div>
+        <div class="doc-links">
+          <a href="project1.pdf" target="_blank" class="btn-primary btn-sm">📄 View Full Report</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="group-label fade-up"><span>Manufacturing · Drawing · Prototyping</span></div>
+
+    <!-- 06 Manufacturing -->
+    <div class="project-card fade-up">
+      <div class="project-header">
+        <div class="project-num">06</div>
+        <div class="project-tag">Mechanical Design A · Year 2 · 2025/26</div>
+        <h3 class="project-title">UAV Engine — Manufacturing Report<br>&amp; CNC Machining of the Piston</h3>
+        <div class="project-meta">Group 8 report + individual CAM assignment</div>
+      </div>
+      <div class="project-body">
+        <p class="project-desc">
+          Taking the engine from design to production for a 50,000-unit run: material screening against fatigue strength and a ≤ 10 USD/kg cost limit, selecting AISI 4340 steel for the crankcase and crankshaft, and choosing forging, CNC machining, honing, grinding and heat treatment for each part. Individually, I produced the CAM toolpaths in Fusion 360 for the Aluminium 2618-T6 piston — picked for its high-temperature strength and fatigue resistance — using 7 operations, 4 tools and a ~9 min cycle time.
+        </p>
+        <div class="project-highlights">
+          <div class="highlight"><div class="highlight-label">Production Volume</div><div class="highlight-value">50,000 units</div></div>
+          <div class="highlight"><div class="highlight-label">Piston CNC Cycle</div><div class="highlight-value">9 min 13 s</div></div>
+          <div class="highlight"><div class="highlight-label">Piston Material</div><div class="highlight-value">Al 2618-T6</div></div>
+        </div>
+        <div class="project-tags">
+          <span class="tag">Fusion 360 CAM</span><span class="tag">CNC Milling &amp; Drilling</span><span class="tag">Material Selection</span><span class="tag">Forging</span><span class="tag">AISI 4340</span><span class="tag">Design for Manufacture</span>
+        </div>
+        <div class="doc-links">
+          <a href="docs/engine-manufacturing-report.pdf" target="_blank" class="btn-primary btn-sm">📄 Manufacturing Report</a>
+          <a href="docs/piston-cam.pdf" target="_blank" class="btn-ghost btn-sm">⚙️ Piston CAM</a>
+          <a href="docs/piston-drawing.pdf" target="_blank" class="btn-ghost btn-sm">📐 Piston Drawing</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 07 Hydraulic cylinder -->
+    <div class="project-card fade-up">
+      <div class="project-header">
+        <div class="project-num">07</div>
+        <div class="project-tag">Integrated Design Project 1A · Year 1 · Dec 2024</div>
+        <h3 class="project-title">Hydraulic Cylinder Assembly —<br>CAD &amp; Engineering Drawings</h3>
+        <div class="project-meta">Individual design project</div>
+      </div>
+      <div class="project-body">
+        <p class="project-desc">
+          CAD modelling and a full set of dimensioned third-angle engineering drawings for a hydraulic cylinder assembly: the main housing body, piston rod eyes and back fixtures, plus the assembly with parts list and title blocks.
+        </p>
+        <div class="project-tags">
+          <span class="tag">CAD Modelling</span><span class="tag">3rd Angle Projection</span><span class="tag">Assembly Drawings</span><span class="tag">Parts List</span>
+        </div>
+        <div class="doc-links">
+          <a href="docs/hydraulic-cylinder-drawings.pdf" target="_blank" class="btn-primary btn-sm">📐 View Drawings</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 08 Bridge -->
+    <div class="project-card fade-up">
+      <div class="project-header">
+        <div class="project-num">08</div>
+        <div class="project-tag">Physical Prototype · Load Testing</div>
+        <h3 class="project-title">Timber Truss Bridge —<br>Build &amp; Load Test</h3>
+        <div class="project-meta">Hands-on build · University of Birmingham Dubai labs</div>
+      </div>
+      <div class="project-body">
+        <p class="project-desc">
+          A timber Warren-style truss bridge built by hand and load-tested in the university lab on a 100 kN Lloyd LD100 universal testing machine — turning truss and member-force theory into a physical structure.
+        </p>
+        <div class="photo-grid">
+          <img src="img/bridge-test-1.jpg" alt="Timber truss bridge in the universal testing machine" loading="lazy">
+          <img src="img/bridge-test-2.jpg" alt="Timber truss bridge during load testing" loading="lazy">
+        </div>
+        <div class="project-tags">
+          <span class="tag">Truss Analysis</span><span class="tag">Prototyping</span><span class="tag">Load Testing</span>
         </div>
       </div>
     </div>
@@ -569,7 +705,7 @@
     <div class="contact-grid">
       <div class="contact-text fade-up">
         <p>Whether you're a recruiter or a fellow engineer, I'd love to hear from you.</p>
-        <p>I'm currently open to internship opportunities and engineering placements for Summer 2026 and beyond.</p>
+        <p>I'm currently open to graduate roles and engineering opportunities from 2027, especially in energy, thermal and cooling systems.</p>
       </div>
       <div class="fade-up fade-up-delay-1">
         <a href="tel:+971524366905" class="contact-item">
