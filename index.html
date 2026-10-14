@@ -284,6 +284,15 @@
   .photo-grid img { width:100%; height:320px; object-fit:cover; border-radius:10px; }
   @media (max-width: 600px) { .photo-grid { grid-template-columns:1fr; } .photo-grid img { height:260px; } .project-header, .project-body { padding:1.5rem; } }
 
+  .mini-panel { background:white; border:1px solid rgba(168,67,31,0.18); border-left:3px solid #c0612a; border-radius:12px; padding:1.2rem 1.5rem; margin-bottom:2rem; }
+  .mini-title { font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#a8431f; margin-bottom:0.6rem; }
+  .mini-row { display:flex; flex-wrap:wrap; justify-content:space-between; gap:0.6rem 1.5rem; padding:0.6rem 0; border-top:1px solid var(--light); }
+  .mini-title + .mini-row { border-top:none; }
+  .mini-text { font-size:0.85rem; color:var(--gray); line-height:1.6; flex:1 1 380px; }
+  .mini-text strong { color:var(--navy); }
+  .mini-links { display:flex; flex-wrap:wrap; gap:0.4rem; align-items:flex-start; }
+  .mini-links a { font-size:0.75rem; font-weight:600; color:var(--sky); text-decoration:none; border:1px solid rgba(46,117,182,0.25); padding:3px 10px; border-radius:20px; }
+  .mini-links a:hover { background:rgba(46,117,182,0.08); }
   /* CV */
   #cv { background: var(--light); }
   .cv-inner {
@@ -434,7 +443,7 @@
     <div class="about-grid">
       <div class="about-text fade-up">
         <p>I'm a final-year Mechanical Engineering student based in Dubai, combining a strong academic foundation with hands-on engineering project work. Thermodynamics, heat transfer and fluid mechanics are where I perform strongest.</p>
-        <p>My First-Class Year 2 average reflects my dedication to mastering complex engineering fundamentals. Beyond the classroom, I've designed and validated a miniature diesel engine, run thermofluids experiments from compressors to steam engines, and contributed to two major group design projects, including a 200-page report on an underwater habitat system.</p>
+        <p>My First-Class Year 2 average reflects my dedication to mastering complex engineering fundamentals. Beyond the classroom, I've designed and validated a miniature diesel engine, and contributed to two major group design projects, including a 200-page report on an underwater habitat system.</p>
         <p>I'm passionate about how AI and modern tools can accelerate engineering workflows, and I bring that mindset into every project I work on.</p>
       </div>
       <div class="skills-grid fade-up fade-up-delay-1">
@@ -473,7 +482,7 @@
     <div class="projects-intro">
       <div class="section-label fade-up">Engineering Projects</div>
       <h2 class="section-title fade-up">Selected work from<br>University of Birmingham Dubai</h2>
-      <p class="section-sub fade-up">Eight projects from my first two years. Thermodynamics, heat transfer and fluids come first — the area I perform strongest in and want to build my career around, especially energy and cooling systems.</p>
+      <p class="section-sub fade-up">Major projects from my first two years. Thermodynamics, heat transfer and energy come first — the area I perform strongest in and want to build my career around, especially energy and cooling systems.</p>
     </div>
 
     <div class="group-label fade-up"><span>Thermodynamics · Heat Transfer · Energy</span></div>
@@ -506,55 +515,25 @@
       </div>
     </div>
 
-    <!-- 02 Thermofluids labs -->
-    <div class="project-card fade-up">
-      <div class="project-header thermo">
-        <div class="project-num">02</div>
-        <div class="project-tag">Fluid Mechanics &amp; Energy Transfer · Year 1 · 2024/25</div>
-        <h3 class="project-title">Thermofluids Experimental Series —<br>Compressors, Steam Power &amp; Heat Transfer</h3>
-        <div class="project-meta">Individual technical reports · 6 experiments</div>
-      </div>
-      <div class="project-body">
-        <p class="project-desc">
-          A series of experiments testing thermodynamic and fluid theory against real hardware. On the energy side: a <strong>two-stage reciprocating air compressor</strong> (free air delivery, electrical vs indicated power, efficiency and polytropic index of each stage — showing why inter-stage cooling cuts compression work); a <strong>steam engine</strong> run at three boiler pressures, with Willans lines built from brake power and steam consumption; and <strong>natural convection and radiation</strong> from a heated plate, separating the two modes with the Stefan–Boltzmann law and showing radiation overtaking convection as surface temperature rises. On the fluids side: Bernoulli and venturimeters, jet impact forces, and friction losses in pipes.
-        </p>
-        <div class="project-highlights">
-          <div class="highlight"><div class="highlight-label">Thermodynamics</div><div class="highlight-value">Compressor &amp; steam engine</div></div>
-          <div class="highlight"><div class="highlight-label">Heat Transfer</div><div class="highlight-value">Convection vs radiation</div></div>
-          <div class="highlight"><div class="highlight-label">Fluid Mechanics</div><div class="highlight-value">Venturi · jets · pipe losses</div></div>
-        </div>
-        <div class="project-tags">
-          <span class="tag">Polytropic Compression</span><span class="tag">Inter-stage Cooling</span><span class="tag">Willans Line</span><span class="tag">Stefan–Boltzmann</span><span class="tag">Natural Convection</span><span class="tag">Bernoulli</span><span class="tag">Major &amp; Minor Losses</span>
-        </div>
-        <div class="doc-links">
-          <a href="docs/lab-two-stage-compressor.pdf" target="_blank" class="btn-primary btn-sm">📄 Two-Stage Compressor</a>
-          <a href="docs/lab-steam-engine.pdf" target="_blank" class="btn-primary btn-sm">📄 Steam Engine</a>
-          <a href="docs/lab-convection-radiation.pdf" target="_blank" class="btn-primary btn-sm">📄 Convection &amp; Radiation</a>
-          <a href="docs/lab-venturimeter.pdf" target="_blank" class="btn-ghost btn-sm">Venturimeters</a>
-          <a href="docs/lab-impact-of-jets.pdf" target="_blank" class="btn-ghost btn-sm">Impact of Jets</a>
-          <a href="docs/lab-pipe-losses.pdf" target="_blank" class="btn-ghost btn-sm">Pipe Losses</a>
+    <!-- Supporting coursework (compact) -->
+    <div class="mini-panel fade-up">
+      <div class="mini-title">Supporting thermofluids coursework</div>
+      <div class="mini-row">
+        <div class="mini-text"><strong>Lab reports (Year 1):</strong> two-stage air compressor (polytropic index, inter-stage cooling), steam engine Willans lines, natural convection vs radiation, plus venturimeters, jet impact and pipe losses.</div>
+        <div class="mini-links">
+          <a href="docs/lab-two-stage-compressor.pdf" target="_blank">Compressor</a>
+          <a href="docs/lab-steam-engine.pdf" target="_blank">Steam Engine</a>
+          <a href="docs/lab-convection-radiation.pdf" target="_blank">Convection &amp; Radiation</a>
+          <a href="docs/lab-venturimeter.pdf" target="_blank">Venturi</a>
+          <a href="docs/lab-impact-of-jets.pdf" target="_blank">Jets</a>
+          <a href="docs/lab-pipe-losses.pdf" target="_blank">Pipe Losses</a>
         </div>
       </div>
-    </div>
-
-    <!-- 03 Solar -->
-    <div class="project-card fade-up">
-      <div class="project-header thermo">
-        <div class="project-num">03</div>
-        <div class="project-tag">Integrated Design Project 1A · Year 1 · 2024/25</div>
-        <h3 class="project-title">Solar Power for Electricity &amp; Cooling —<br>Technical Report and Presentation</h3>
-        <div class="project-meta">Individual report + presentation</div>
-      </div>
-      <div class="project-body">
-        <p class="project-desc">
-          An assessment of solar power as a route to energy needs and climate goals. Covers how concentrated solar thermal plants heat a working fluid to drive a steam turbine versus how PV cells generate electricity; solar-driven cooling using vapour-compression refrigeration and thermoelectric coolers for off-grid use; the thermo-mechanical start-up limits of CSP plants (receiver, steam generator, turbine); the measured effect of air pollution on PV output; and the role of solar in UAE decarbonisation, with Dubai's Sustainable City as a case study.
-        </p>
-        <div class="project-tags">
-          <span class="tag">Solar Thermal (CSP)</span><span class="tag">Photovoltaics</span><span class="tag">Vapour-Compression Refrigeration</span><span class="tag">Thermoelectric Cooling</span><span class="tag">UAE Energy Transition</span>
-        </div>
-        <div class="doc-links">
-          <a href="docs/solar-power-report.pdf" target="_blank" class="btn-primary btn-sm">📄 Report</a>
-          <a href="docs/solar-power-presentation.pdf" target="_blank" class="btn-ghost btn-sm">🖥️ Presentation</a>
+      <div class="mini-row">
+        <div class="mini-text"><strong>Solar power report (Year 1):</strong> solar thermal vs PV generation and solar-driven refrigeration for off-grid cooling.</div>
+        <div class="mini-links">
+          <a href="docs/solar-power-report.pdf" target="_blank">Report</a>
+          <a href="docs/solar-power-presentation.pdf" target="_blank">Presentation</a>
         </div>
       </div>
     </div>
@@ -564,7 +543,7 @@
     <!-- 04 IDP2 A2 -->
     <div class="project-card fade-up">
       <div class="project-header">
-        <div class="project-num">04</div>
+        <div class="project-num">02</div>
         <div class="project-tag">IDP2 · Assignment 2 · May 2026</div>
         <h3 class="project-title">Future Ocean Habitat —<br>Mechanical Detail Design</h3>
         <div class="project-meta">Group DM3 · 6 members · University of Birmingham Dubai</div>
@@ -595,7 +574,7 @@
     <!-- 05 IDP2 A1 -->
     <div class="project-card fade-up">
       <div class="project-header">
-        <div class="project-num">05</div>
+        <div class="project-num">03</div>
         <div class="project-tag">IDP2 · Assignment 1 · Feb 2026</div>
         <h3 class="project-title">Future Ocean Habitat —<br>Concept Design</h3>
         <div class="project-meta">Group D3 · 6 members · University of Birmingham Dubai</div>
@@ -627,7 +606,7 @@
     <!-- 06 Manufacturing -->
     <div class="project-card fade-up">
       <div class="project-header">
-        <div class="project-num">06</div>
+        <div class="project-num">04</div>
         <div class="project-tag">Mechanical Design A · Year 2 · 2025/26</div>
         <h3 class="project-title">UAV Engine — Manufacturing Report<br>&amp; CNC Machining of the Piston</h3>
         <div class="project-meta">Group 8 report + individual CAM assignment</div>
@@ -655,7 +634,7 @@
     <!-- 07 Hydraulic cylinder -->
     <div class="project-card fade-up">
       <div class="project-header">
-        <div class="project-num">07</div>
+        <div class="project-num">05</div>
         <div class="project-tag">Integrated Design Project 1A · Year 1 · Dec 2024</div>
         <h3 class="project-title">Hydraulic Cylinder Assembly —<br>CAD &amp; Engineering Drawings</h3>
         <div class="project-meta">Individual design project</div>
@@ -676,7 +655,7 @@
     <!-- 08 Bridge -->
     <div class="project-card fade-up">
       <div class="project-header">
-        <div class="project-num">08</div>
+        <div class="project-num">06</div>
         <div class="project-tag">Physical Prototype · Load Testing</div>
         <h3 class="project-title">Timber Truss Bridge —<br>Build &amp; Load Test</h3>
         <div class="project-meta">Hands-on build · University of Birmingham Dubai labs</div>
